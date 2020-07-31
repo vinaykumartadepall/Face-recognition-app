@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">face_detection</string>
+    <string name="title_activity_main">face_detection</string>
+    <string name="package_name">com.facerecognition.app</string>
+    <string name="custom_url_scheme">com.facerecognition.app</string>
+</resources>

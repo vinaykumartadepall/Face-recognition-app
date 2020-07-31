@@ -1,0 +1,8 @@
+{
+  "appId": "com.facerecognition.app",
+  "appName": "face_detection",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

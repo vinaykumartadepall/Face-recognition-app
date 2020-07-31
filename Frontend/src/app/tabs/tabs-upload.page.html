@@ -1,0 +1,124 @@
+<!-- <ion-tabs>
+
+   <ion-tab-bar slot="bottom"> 
+    <ion-tab-button tab="tab3">
+      <ion-icon name="camera"></ion-icon>
+      <ion-label>Home page</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs> -->
+
+<!-- <input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button (click)="onUpload()">Upload!</button> -->
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Upload Image
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="myclass"> -->
+  <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <!-- <input type="file" name="file" (change)="onFileChanged($event)" #fileInput> -->
+
+  <!-- <ion-button (click)="fileInput.click()">Select File</ion-button>
+      
+      <ion-button color="success" (click)="matchFace()">Match Face</ion-button>
+      
+      <ion-button (click)="onUpload()">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </ion-button>
+      
+      <ion-button color="warning" (click)="getImage()">Display Image</ion-button>
+      
+      <br>
+      <br> 
+      <ion-input background="blue" autofocus="true" type="text" (input)="onNameChanged($event.target.value)"></ion-input> -->
+
+
+
+  <div *ngIf="isSuccess" style="color: rgb(81, 211, 30); text-align: center;padding-top: 1%;">
+    Uploaded Succesfully
+  </div>
+
+  <div *ngIf="hide_home">
+    <ion-grid>
+      <ion-col class="ion-align-self-center">
+        <div style="height: 100%; display: flex;align-items: center; justify-content: center;">
+          <ion-card>
+            <ion-card-header>
+              <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+              <ion-card-title>Capture a new Image!</ion-card-title>
+            </ion-card-header>
+
+            <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed" > -->
+            <!-- </ion-fab> -->
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+              <ion-card-content>
+                <ion-button (click)="takePicture()">
+                  <ion-icon name="camera"></ion-icon>
+                  Capture Image
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <!-- <hr color="white" width="85%" > -->
+      <p style="color: white; text-align: center;font-size: x-large;margin-top: 0%;margin-bottom: 0%;"> OR </p>
+
+      <ion-col>
+        <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Upload from your device!</ion-card-title>
+            </ion-card-header>
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+              <ion-card-content>
+                <ion-button (click)="fileInput.click()">
+                  <input type="file" name="file" (change)="onFileChanged($event)" #fileInput>
+                  <ion-icon name="cloud-upload"></ion-icon>
+                  Upload File
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-grid>
+    <!-- <ion-button color="success" (click)="matchFace()">Match Face</ion-button>
+    <ion-button color="warning" (click)="getImage()">Display Image</ion-button>
+    <ion-button (click)="onUpload()">Upload!</ion-button>  -->
+
+  </div>
+  <!-- <ion-button (click)="hide()"> hide </ion-button>
+    <ion-button (click)="unhide()"> unhide </ion-button> -->
+  <div *ngIf="isImageSaved" style="text-align:-webkit-center;">
+    <ion-img style="width: 75vw; height: 75vh;align-self:center;margin-top: 2%;" [src]="cardImageBase64"></ion-img>
+    <ion-button style="margin-top: 2%;" color="success" (click)="presentAlertPrompt()">Confirm</ion-button>
+    <ion-button style="margin-top: 2%;" color="danger" (click)="goBack()">Cancel</ion-button>
+  </div>
+  <!-- <ion-img width="20" height="20" [src]="base64Image"></ion-img> -->
+  <div *ngIf="hide_home" style="text-align: center;">
+    <ion-button color="danger" [routerLink]="['/']"> Back </ion-button>
+  </div>
+</ion-content>
+<!-- <div background="white">
+    <ion-input background="white" autofocus="true" font-color="white" type="text" (input)="onNameChanged($event.target.value)"></ion-input>
+  </div> -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- <p> Ohh!!!! </p>
+<p> That's awesome </p> -->
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Face-Capture and Recognition
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-col class="ion-align-self-center">
+          <div style="height: 100%; display: flex;align-items: center; justify-content: center;">
+            <ion-card>
+              <ion-card-header>
+                <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                <ion-card-title>Find a Match</ion-card-title>
+              </ion-card-header>
+  
+              <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed" > -->
+              <!-- </ion-fab> -->
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                <ion-card-content>
+                    <ion-button [routerLink]="['/Match']" color="success">Match Face</ion-button>
+                </ion-card-content>
+              </div>
+            </ion-card>
+          </div>
+        </ion-col>
+        <p style="color: white; text-align: center;font-size: x-large;"> OR </p>
+
+        <ion-col>
+          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Upload to database!</ion-card-title>
+              </ion-card-header>
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                <ion-card-content>
+                    <ion-button [routerLink]="['/Upload']">Upload!</ion-button> 
+                </ion-card-content>
+              </div>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-grid>
+    
+</ion-content>
